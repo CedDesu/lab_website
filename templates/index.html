@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animated Navbar</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+
+
+<body>
+  
+<div class="overlay overlay-slide-left" id="overlay">
+
+  <nav>
+    <ul>
+      <li id="nav-1" class="slide-out-1 center">
+        <a href="#home" class="center">Home</a>
+      </li>
+      <li id="nav-2" class="slide-out-2 center">
+        <a href="#about" class="center">Works</a>
+      </li>
+      <li id="nav-3" class="slide-out-3 center">
+        <a href="/touppercase" class="center">UpperCase</a>
+      </li>
+      <li id="nav-4" class="slide-out-4 center">
+        <a href="/circlearea" class="center">AreaCircle</a>
+      </li>
+      <li id="nav-5" class="slide-out-5 center">
+        <a href="/trianglearea" class="center">AreaTriangle</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="hamburger-menu" id="hamburger-menu">
+  <div class="menu-bar1"></div>
+  <div class="menu-bar2"></div>
+  <div class="menu-bar3"></div>
+</div>
+
+<section id="home" class="center">
+  <p class="logo">Welcome to Erde</p>
+
+  <div class="overlay-boxes">
+    <div class="triple-container">
+
+      <a href="/profile" class="card-link">
+        <article class="card">
+          <h2>Profile</h2>
+          <p>Who are we...</p>
+        </article>
+      </a>
+
+      <a href="#about" class="card-link">
+        <article class="card">
+          <h2>Works</h2>
+          <p>What can we offer...</p>
+        </article>
+      </a>
+
+      <a href="/contacts" class="card-link">
+        <article class="card">
+          <h2>Contact</h2>
+          <p>How can we be summoned...</p>
+        </article>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section id="about" class="center"> 
+    <div class="overlay-boxes"> 
+        <div class="triple-container"> 
+            <a href="/touppercase" class="card-link">
+            <article class="card"> 
+                <h2>Uppercase Tool</h2> 
+                <p>Tool for Converting Strings to Uppercase</p> 
+            </article> 
+            </a>
+            <a href="/circlearea" class="card-link">
+            <article class="card"> 
+                <h2>Area of a Circle Finder</h2> 
+                <p>Tool for finding a Circle's Area</p> 
+            </article> 
+            </a>
+            <a href="/trianglearea" class="card-link">
+            <article class="card"> 
+                <h2>Area of a Triangle Finder</h2> 
+                <p>Tool for finding a Triangle's Area</p> 
+            </article> 
+            </a>
+        </div> 
+    </div> 
+</section>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

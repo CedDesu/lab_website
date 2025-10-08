@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID Card Layout</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+</head>
+<body>
+  <a href="#" class="back-button" onclick="history.back()">← Back</a>
+
+  <script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
+  <header>
+    <h1>Profile</h1>
+  </header>
+
+  <div class="card-container">
+    <div class="id-card">
+      <img src="{{ url_for('static', filename='images/Untitled.png') }}" alt="ID Card Background">
+
+      <div class="name">Cedrique Orbista</div>
+      <div class="main-text">BS-COMPUTER ENGINEERING</div>
+      <div class="side-text">2-2</div>
+
+      <div class="list">
+        <p>I'll do it later rather than sooner. </p>
+        <p>I am not a slave to honour.</p>
+        <p>Is it really love if your heart doesn't flutter?</p>
+        <p>Whatever...</p>
+        <p>To be or not to be...</p>
+        <p>Welp, it is whatever it is...</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

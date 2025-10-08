@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Uppercase Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/touppercase.css') }}">
+</header>
+
+<body>
+    <a href="/" class="back-button">Back</a>
+
+    <header>
+        <h1>String Uppercase Tool</h1>
+    </header>
+
+    <!-- ✅ MAIN CONTAINER (the transparent box) -->
+    <div class="main-container">
+        <h2>Convert String to Uppercase</h2>
+
+        <form action="/touppercase" method="post" class="convert-form">
+            <label for="inputString">Enter a string:</label>
+            <input type="text" id="inputString" name="inputString" placeholder="Type here..." required>
+            <input type="submit" value="Convert">
+        </form>
+
+        {% if result %}
+        <div class="result-box">
+            <p>Converted String:</p>
+            <h3>{{ result }}</h3>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

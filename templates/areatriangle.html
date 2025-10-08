@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Triangle Area Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/areatriangle.css') }}">
+</head>
+
+<body>
+    <a href="/" class="back-button">Back</a>
+
+    <header>
+        <h1>Triangle Area Tool</h1>
+    </header>
+
+    <div class="main-container">
+        <h2>Find the Area of a Triangle</h2>
+
+        <form action="/trianglearea" method="post" class="convert-form">
+            <label for="base">Enter base:</label>
+            <input type="number" id="base" name="base" placeholder="Base length" step="any" required>
+            <h1></h1>
+            <label for="height">Enter height:</label>
+            <input type="number" id="height" name="height" placeholder="Height" step="any" required>
+
+            <input type="submit" value="Calculate Area">
+        </form>
+
+        {% if result %}
+        <div class="result-box">
+            <p>Area of Triangle:</p>
+            <h3>{{ result }} square units</h3>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+</head>
+
+<div class="tint"></div>
+
+<a href="#" class="back-button" onclick="goBack()">← Back</a>
+
+<script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+
+<body>
+  <section class="contact-section">
+
+    <div class="contact-image">
+      <a href="#">
+        <img src="{{ url_for('static', filename='images/cool breeze.jpg') }}" alt="Contact image">
+      </a>
+    </div>
+
+    <div class="contact-content">
+      <h1>Contact Us</h1>
+      <div class="tint"></div>
+
+      <div class="contact-container">
+
+        <form class="contact-form">
+          <label>Full Name</label>
+          <input type="text" name="fullname" placeholder="">
+
+          <label>E-mail</label>
+          <input type="email" name="email" placeholder="">
+
+          <label>Message</label>
+          <textarea name="message" rows="4"></textarea>
+
+          <button type="submit">Contact Us</button>
+        </form>
+
+        <div class="contact-info">
+          <p><strong>Contact</strong><br>zoltraak2000@frieren.com</p>
+          <p><strong>Based in</strong><br>CoolSpellDirection, Erde</p>
+          <div class="socials">
+            <a href="#">
+                <h1></h1>
+                <img src="{{ url_for('static', filename='images/Mage.png') }}" margin-right="-20px" width="220" height="120" alt="Contact image">
+                <i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://kit.fontawesome.com/a2e0e6e6c4.js" crossorigin="anonymous"></script>
+</body>
+</html>
